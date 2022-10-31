@@ -1,0 +1,32 @@
+﻿@using RoRService.Models.ViewModels.GamesViewModels
+@model GameListVM
+
+<input type="hidden" id="gameId" name="id" value="@Model.Id" />
+<div class="game-heading augustus">
+    @Html.DisplayFor(m => m.Name)
+</div>
+<div class="game-item">
+    <div class="pull-right">
+        @Html.DisplayFor(m => m.Era).ToString().ToUpper() REPUBLIC
+    </div>
+    Era
+</div>
+<div class="game-item">
+    <div class="pull-right">
+        @Html.DisplayFor(m => m.Owner)
+    </div>
+    Owner
+</div>
+<div class="game-item">
+    <div class="pull-right">
+        @Html.DisplayFor(m => m.FormatedDateOfLastAction)
+    </div>
+    Last Action Date
+</div>
+<div class="game-item">
+    <div class="pull-right">
+        @Html.DisplayFor(m => m.Status)
+    </div>
+    Status
+</div>
+

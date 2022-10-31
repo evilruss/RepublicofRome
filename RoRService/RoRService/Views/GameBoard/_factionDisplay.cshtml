@@ -1,0 +1,118 @@
+﻿@using RoRService.Models.DataModels.Enums
+@using RoRService.Models.DataModels.Cards;
+@using RoRService.Models.ViewModels.CardsViewModels
+@using RoRService.Models.ViewModels.FactionsViewModels
+@model List<FactionVM>
+
+<div class="faction-display">
+    <div class="display-header">
+        Factions 
+        <div id="gameCloseX" class="close-x">X</div>
+    </div>
+
+    @foreach (var faction in Model)
+    {
+        <hr />
+
+        <div class="faction clearfix">
+            <div class="faction-header">
+                FACTION @faction.No:  @faction.Name (@faction.PlayerName)
+            </div>
+
+            <div class="col-md-4">
+                <div class="faction-detail">
+                    <img src="~/Images/playing-cards-2.png" class="faction-item-img" />
+                    Cards in Hand
+                    <div class="pull-right">
+                        @faction.Hand.Count
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="faction-detail">
+                    <img src="~/Images/coins.png" class="faction-item-img" />
+                    Faction Treasury
+                    <div class="pull-right">
+                        @if (faction.PlayerName == User.Identity.Name)
+                        {
+                            @faction.Treasury
+                        }
+                        else
+                        {
+                            if (faction.Treasury > 0)
+                            {
+                                <text>Yes</text>
+                            }
+                            else
+                            {
+                                <text>No</text>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="faction-detail">
+                    <img src="~/Images/hands-voting.png" class="faction-item-img" />
+                    Votes
+                    <div class="pull-right">@faction.Votes</div>
+                </div>
+            </div>
+
+            <div class="card-list clearfix">
+                <div class="faction-header">Senators</div>
+
+                @foreach (var card in faction.Senators.OrderByDescending(s => s.CardNo == faction.Leader).ThenBy(s => s.CardNo))
+                {
+                    <div class="col-md-4">
+                        @switch (card.Type)
+                        {
+                            case CardType.Senator:
+                                var senator = (SenatorVM)card;
+                                senator.FactionLeader = senator.CardNo == faction.Leader;
+                                @Html.Partial("_senatorCard", senator)
+                                break;
+                            case CardType.Statesman:
+                                var statesman = (SenatorVM)card;
+                                statesman.FactionLeader = statesman.CardNo == faction.Leader;
+                                @Html.Partial("_statesmanCard", statesman)
+                                break;
+                        }
+                    </div>
+                }
+            </div>
+
+            <div class="card-list clearfix">
+                @if (faction.PlayerName == User.Identity.Name || true)
+                {
+                    <div class="faction-header">Cards In Hand</div>
+
+                    foreach (var card in faction.Hand)
+                    {
+                        <div class="col-md-4">
+                            @switch (card.Type)
+                            {
+                                case CardType.Senator:
+                                    @Html.Partial("_senatorCard", (SenatorVM)card)
+                                    break;
+                                case CardType.Statesman:
+                                    @Html.Partial("_statesmanCard", (StatesmanVM)card)
+                                    break;
+                                case CardType.Concession:
+                                    @Html.Partial("_concessionCard", (ConcessionVM)card)
+                                    break;
+                                case CardType.Intrigue:
+                                    @Html.Partial("_intrigueCard", (IntrigueVM)card)
+                                    break;
+                            }
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    }
+
+</div>

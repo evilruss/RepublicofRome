@@ -1,0 +1,827 @@
+﻿{
+  "Deck": {
+    "Senators": [
+      {
+        "CardNo": 1,
+        "Name": "Cornelius",
+        "ImageName": "cornelius.png",
+        "FamilyNo": "1",
+        "HasStatesmen": true,
+        "Military": 4,
+        "Oratory": 3,
+        "Loyalty": 9,
+        "Influence": 5
+      },
+      {
+        "CardNo": 2,
+        "Name": "Fabius",
+        "ImageName": "fabius.png",
+        "FamilyNo": "2",
+        "HasStatesmen": true,
+        "Military": 4,
+        "Oratory": 2,
+        "Loyalty": 9,
+        "Influence": 5
+      },
+      {
+        "CardNo": 3,
+        "Name": "Valerius",
+        "ImageName": "valerius.png",
+        "FamilyNo": "3",
+        "HasStatesmen": false,
+        "Military": 1,
+        "Oratory": 2,
+        "Loyalty": 10,
+        "Influence": 5
+      },
+      {
+        "CardNo": 4,
+        "Name": "Julius",
+        "ImageName": "julius.png",
+        "FamilyNo": "4",
+        "HasStatesmen": true,
+        "Military": 4,
+        "Oratory": 3,
+        "Loyalty": 9,
+        "Influence": 4
+      },
+      {
+        "CardNo": 5,
+        "Name": "Claudius",
+        "ImageName": "claudius.png",
+        "FamilyNo": "5",
+        "HasStatesmen": false,
+        "Military": 2,
+        "Oratory": 3,
+        "Loyalty": 7,
+        "Influence": 4
+      },
+      {
+        "CardNo": 6,
+        "Name": "Manilius",
+        "ImageName": "manilius.png",
+        "FamilyNo": "6",
+        "HasStatesmen": false,
+        "Military": 3,
+        "Oratory": 2,
+        "Loyalty": 7,
+        "Influence": 4,
+        "Popularity": 0
+      },
+      {
+        "CardNo": 7,
+        "Name": "Fulvius",
+        "ImageName": "fulvius.png",
+        "FamilyNo": "7",
+        "HasStatesmen": true,
+        "Military": 2,
+        "Oratory": 2,
+        "Loyalty": 8,
+        "Influence": 4,
+        "Popularity": 0
+      },
+      {
+        "CardNo": 8,
+        "Name": "Furius",
+        "ImageName": "furius.png",
+        "FamilyNo": "8",
+        "HasStatesmen": false,
+        "Military": 3,
+        "Oratory": 3,
+        "Loyalty": 8,
+        "Influence": 3,
+        "Popularity": 0
+      },
+      {
+        "CardNo": 9,
+        "Name": "Aurelius",
+        "ImageName": "aurelius.png",
+        "FamilyNo": "9",
+        "HasStatesmen": false,
+        "Military": 2,
+        "Oratory": 3,
+        "Loyalty": 7,
+        "Influence": 3,
+        "Popularity": 0
+      },
+      {
+        "CardNo": 10,
+        "Name": "Junius",
+        "ImageName": "junius.png",
+        "FamilyNo": "10",
+        "HasStatesmen": false,
+        "Military": 1,
+        "Oratory": 2,
+        "Loyalty": 8,
+        "Influence": 3,
+        "Popularity": 0
+      },
+      {
+        "CardNo": 11,
+        "Name": "Papirius",
+        "ImageName": "papirius.png",
+        "FamilyNo": "11",
+        "HasStatesmen": false,
+        "Military": 1,
+        "Oratory": 2,
+        "Loyalty": 6,
+        "Influence": 3,
+        "Popularity": 0
+      },
+      {
+        "CardNo": 12,
+        "Name": "Acilius",
+        "ImageName": "acilius.png",
+        "FamilyNo": "12",
+        "HasStatesmen": false,
+        "Military": 2,
+        "Oratory": 2,
+        "Loyalty": 7,
+        "Influence": 3,
+        "Popularity": 0
+      },
+      {
+        "CardNo": 13,
+        "Name": "Flaminius",
+        "ImageName": "flaminius.png",
+        "FamilyNo": "13",
+        "HasStatesmen": false,
+        "Military": 4,
+        "Oratory": 2,
+        "Loyalty": 6,
+        "Influence": 3,
+        "Popularity": 0
+      },
+      {
+        "CardNo": 14,
+        "Name": "Aelius",
+        "ImageName": "aelius.png",
+        "FamilyNo": "14",
+        "HasStatesmen": false,
+        "Military": 3,
+        "Oratory": 4,
+        "Loyalty": 7,
+        "Influence": 2,
+        "Popularity": 0
+      },
+      {
+        "CardNo": 15,
+        "Name": "Sulpicius",
+        "ImageName": "sulpicius.png",
+        "FamilyNo": "15",
+        "HasStatesmen": false,
+        "Military": 3,
+        "Oratory": 2,
+        "Loyalty": 8,
+        "Influence": 2,
+        "Popularity": 0
+      },
+      {
+        "CardNo": 16,
+        "Name": "Calpurnius",
+        "ImageName": "Calpurnius.png",
+        "FamilyNo": "16",
+        "HasStatesmen": false,
+        "Military": 1,
+        "Oratory": 2,
+        "Loyalty": 9,
+        "Influence": 2,
+        "Popularity": 0
+      },
+      {
+        "CardNo": 17,
+        "Name": "Plautius",
+        "ImageName": "plautius.png",
+        "FamilyNo": "17",
+        "HasStatesmen": false,
+        "Military": 2,
+        "Oratory": 1,
+        "Loyalty": 6,
+        "Influence": 2,
+        "Popularity": 0
+      },
+      {
+        "CardNo": 18,
+        "Name": "Quinctius",
+        "ImageName": "quinctius.png",
+        "FamilyNo": "18",
+        "HasStatesmen": true,
+        "Military": 3,
+        "Oratory": 2,
+        "Loyalty": 6,
+        "Influence": 1,
+        "Popularity": 0
+      },
+      {
+        "CardNo": 19,
+        "Name": "Aemilius",
+        "ImageName": "aemilius.png",
+        "FamilyNo": "19",
+        "HasStatesmen": true,
+        "Military": 4,
+        "Oratory": 2,
+        "Loyalty": 8,
+        "Influence": 1,
+        "Popularity": 0
+      },
+      {
+        "CardNo": 20,
+        "Name": "Terentius",
+        "ImageName": "terentius.png",
+        "FamilyNo": "20",
+        "HasStatesmen": false,
+        "Military": 2,
+        "Oratory": 1,
+        "Loyalty": 6,
+        "Influence": 1,
+        "Popularity": 0
+      }
+    ],
+    "Statesmen": [
+      {
+        "CardNo": 31,
+        "Name": "P. Cornelius Scipio Africanus",
+        "ImageName": "scipio.png",
+        "FamilyNo": "1A",
+        "Military": 5,
+        "Oratory": 5,
+        "Loyalty": 7,
+        "Influence": 6,
+        "Popularity": 0,
+        "SpecialRules": [
+          {
+            "Code": "PUNC_DS"
+          },
+          {
+            "Code": "CATO_LOYALTY_0"
+          }
+        ]
+      },
+      {
+        "CardNo": 32,
+        "Name": "Q. Fabius Maximum Verrucosus Cunctator",
+        "ImageName": "fabiusmaximus.png",
+        "FamilyNo": "2A",
+        "Military": 5,
+        "Oratory": 2,
+        "Loyalty": 7,
+        "Influence": 3,
+        "SpecialRules": [
+          {
+            "Code": "HALF_LOSSES"
+          }
+        ]
+      },
+      {
+        "CardNo": 33,
+        "Name": "T. Quinctius Flaminius",
+        "ImageName": "quinctiusflaminius.png",
+        "FamilyNo": "18A",
+        "Military": 5,
+        "Oratory": 4,
+        "Loyalty": 7,
+        "Influence": 4,
+        "SpecialRules": [
+          {
+            "Code": "MACEDONIAN_DS"
+          }
+        ]
+      },
+      {
+        "CardNo": 34,
+        "Name": "L. Aemlius Paullus Macedonicus",
+        "ImageName": "aemiliuspaullus.png",
+        "FamilyNo": "19A",
+        "Military": 5,
+        "Oratory": 5,
+        "Loyalty": 8,
+        "Influence": 4,
+        "SpecialRules": [
+          {
+            "Code": "MACEDONIAN_DS"
+          }
+        ]
+      },
+      {
+        "CardNo": 35,
+        "Name": "M. Porcius Cato the Elder",
+        "ImageName": "cato.png",
+        "FamilyNo": "5",
+        "Military": 1,
+        "Oratory": 6,
+        "Loyalty": 10,
+        "Influence": 1,
+        "SpecialRules": [
+          {
+            "Code": "TRIBUTE"
+          },
+          {
+            "Code": "SCIPIO_LOYALTY_0"
+          },
+          {
+            "Code": "FLAMINIUS_LOYALTY_0"
+          }
+        ]
+      }
+    ],
+    "Concessions": [
+      {
+        "CardNo": 50,
+        "Name": "Tax Farmer 1",
+        "ImageName": "taxfarmer1.png",
+        "Income": 2
+      },
+      {
+        "CardNo": 51,
+        "Name": "Tax Farmer 2",
+        "ImageName": "taxfarmer2.png",
+        "Income": 2
+      },
+      {
+        "CardNo": 52,
+        "Name": "Tax Farmer 3",
+        "ImageName": "taxfarmer3.png",
+        "Income": 2
+      },
+      {
+        "CardNo": 53,
+        "Name": "Tax Farmer 4",
+        "ImageName": "taxfarmer4.png",
+        "Income": 2
+      },
+      {
+        "CardNo": 54,
+        "Name": "Tax Farmer 5",
+        "ImageName": "taxfarmer5.png",
+        "Income": 2
+      },
+      {
+        "CardNo": 55,
+        "Name": "Tax Farmer 6",
+        "ImageName": "taxfarmer6.png",
+        "Income": 2
+      },
+      {
+        "CardNo": 56,
+        "Name": "Scilian Grain",
+        "ImageName": "siciliangrain.png",
+        "Income": 4,
+        "SpecialRules": [
+          {
+            "Code": "SCILIAN_WAR_ELIMINATE"
+          },
+          {
+            "Code": "DROUGHT_MULTIPLY"
+          }
+        ]
+      },
+      {
+        "CardNo": 57,
+        "Name": "Egyptian Grain",
+        "ImageName": "egyptiangrain.png",
+        "Income": 5,
+        "SpecialRules": [
+          {
+            "Code": "ALEXANDRINE_WAR_ELIMINATE"
+          },
+          {
+            "Code": "DROUGHT_MULTIPLY"
+          }
+        ]
+      },
+      {
+        "CardNo": 58,
+        "Name": "Harbour Fees",
+        "ImageName": "harborfees.png",
+        "Income": 3
+      },
+      {
+        "CardNo": 59,
+        "Name": "Mining",
+        "ImageName": "mining.png",
+        "Income": 3
+      },
+      {
+        "CardNo": 60,
+        "Name": "Armaments",
+        "ImageName": "armaments.png",
+        "Income": 2,
+        "SpecialRules": [
+          {
+            "Code": "NO_STANDARD_INCOME"
+          },
+          {
+            "Code": "LEGION_BUILD"
+          }
+        ]
+      },
+      {
+        "CardNo": 61,
+        "Name": "Ship Building",
+        "ImageName": "shipbuilding.png",
+        "Income": 3,
+        "SpecialRules": [
+          {
+            "Code": "NO_STANDARD_INCOME"
+          },
+          {
+            "Code": "SHIP_BUILD"
+          }
+        ]
+      },
+      {
+        "CardNo": 62,
+        "Name": "Land Commissioner",
+        "ImageName": "landcommissioner.png",
+        "Income": 3,
+        "SpecialRules": [
+          {
+            "Code": "NO_STANDARD_INCOME"
+          },
+          {
+            "Code": "LAND_BILL"
+          }
+        ]
+      }
+    ],
+    "Wars": [
+      {
+        "CardNo": 70,
+        "Name": "1st Illyrian War",
+        "ImageName": "1stillyrianwar.png",
+        "WarName": "ILLYRIAN",
+        "Legions": 5,
+        "FleetSupport": 3,
+        "Fleet": 0,
+        "Disaster": [
+          { "Roll": 5 }
+        ],
+        "StandOff": [
+          { "Roll": 17 }
+        ],
+        "Talents": 10,
+        "SpecialRules": [
+          {
+            "Code": "INACTIVE"
+          },
+          {
+            "Code": "DROUGHT"
+          },
+          {
+            "Code": "PROVINCE_ILLYRICUM_2"
+          }
+        ]
+      },
+      {
+        "CardNo": 71,
+        "Name": "2nd Illyrian War",
+        "ImageName": "2ndillyrianwar.png",
+        "WarName": "ILLYRIAN",
+        "Legions": 4,
+        "FleetSupport": 2,
+        "Fleet": 0,
+        "Disaster": [
+          { "Roll": 5 }
+        ],
+        "StandOff": [
+          { "Roll": 17 }
+        ],
+        "Talents": 10,
+        "SpecialRules": [
+          {
+            "Code": "PROVINCE_ILLYRICUM_2"
+          }
+        ]
+      },
+      {
+        "CardNo": 72,
+        "Name": "1st Gallic War",
+        "ImageName": "1stgallicwar.png",
+        "WarName": "GALLIC",
+        "Legions": 10,
+        "FleetSupport": 0,
+        "Fleet": 0,
+        "Disaster": [
+          { "Roll": 13 }
+        ],
+        "StandOff": [
+          { "Roll": 15 }
+        ],
+        "Talents": 20,
+        "SpecialRules": [
+          {
+            "Code": "PROVINCE_CISALPINE_GAUL_1"
+          }
+        ]
+      },
+      {
+        "CardNo": 73,
+        "Name": "1st Macedonian War",
+        "ImageName": "1stmacedonianwar.png",
+        "WarName": "MACEDONIAN",
+        "Legions": 12,
+        "FleetSupport": 10,
+        "Fleet": 0,
+        "Disaster": [
+          { "Roll": 12 }
+        ],
+        "StandOff": [
+          { "Roll": 11 },
+          { "Roll": 18 }
+        ],
+        "Talents": 25,
+        "SpecialRules": [
+          {
+            "Code": "PROVINCE_CISALPINE_GAUL_1"
+          }
+        ]
+      },
+      {
+        "CardNo": 74,
+        "Name": "2nd Macedonian War",
+        "ImageName": "1stmacedonianwar.png",
+        "WarName": "MACEDONIAN",
+        "Legions": 10,
+        "FleetSupport": 5,
+        "Fleet": 0,
+        "Disaster": [
+          { "Roll": 13 }
+        ],
+        "StandOff": [
+          { "Roll": 14 }
+        ],
+        "Talents": 45,
+        "SpecialRules": [
+          {
+            "Code": "INACTIVE"
+          }
+        ]
+      },
+      {
+        "CardNo": 75,
+        "Name": "1st Punic War",
+        "ImageName": "1stpunicwar.png",
+        "WarName": "PUNIC",
+        "Legions": 10,
+        "FleetSupport": 5,
+        "Fleet": 10,
+        "Disaster": [
+          { "Roll": 13 }
+        ],
+        "StandOff": [
+          { "Roll": 11 },
+          { "Roll": 14 }
+        ],
+        "Talents": 35,
+        "SpecialRules": [
+          {
+            "Code": "INACTIVE"
+          },
+          {
+            "Code": "PROVINCE_SCICILY_1"
+          },
+          {
+            "Code": "PROVINCE_SARDINIA-CORSICA_1"
+          }
+        ]
+      },
+      {
+        "CardNo": 76,
+        "Name": "2nd Punic War",
+        "ImageName": "2ndpunicwar.png",
+        "WarName": "PUNIC",
+        "Legions": 15,
+        "FleetSupport": 5,
+        "Fleet": 0,
+        "Disaster": [
+          { "Roll": 10 }
+        ],
+        "StandOff": [
+          { "Roll": 11 },
+          { "Roll": 15 }
+        ],
+        "Talents": 25,
+        "SpecialRules": [
+          {
+            "Code": "PROVINCE_NEAR_SPAIN_1"
+          },
+          {
+            "Code": "PROVINCE_FURTHER_SPAIN_1"
+          }
+        ]
+      },
+      {
+        "CardNo": 77,
+        "Name": "Syrian War",
+        "ImageName": "syrianwar.png",
+        "WarName": "SYRIAN",
+        "Legions": 6,
+        "FleetSupport": 2,
+        "Fleet": 0,
+        "Disaster": [
+          { "Roll": 16 }
+        ],
+        "StandOff": [
+          { "Roll": 15 }
+        ],
+        "Talents": 45
+      }
+    ],
+    "Leaders": [
+      {
+        "CardNo": 100,
+        "Name": "Antiochus III",
+        "ImageName": "antiochusiii.png",
+        "WarName": "SYRIAN",
+        "Bonus": 5,
+        "Disaster": [
+          { "Roll": 14 }
+        ],
+        "StandOff": [
+          { "Roll": 17 }
+        ]
+      },
+      {
+        "CardNo": 101,
+        "Name": "Hamilcar",
+        "ImageName": "hamilcar.png",
+        "WarName": "PUNIC",
+        "Bonus": 3,
+        "Disaster": [
+          { "Roll": 8 }
+        ],
+        "StandOff": [
+          { "Roll": 12 }
+        ]
+      },
+      {
+        "CardNo": 102,
+        "Name": "Hannibal",
+        "ImageName": "hannibal.png",
+        "WarName": "PUNIC",
+        "Bonus": 7,
+        "Disaster": [
+          { "Roll": 9 }
+        ],
+        "StandOff": [
+          { "Roll": 16 }
+        ]
+      },
+      {
+        "CardNo": 103,
+        "Name": "Phillip V",
+        "ImageName": "philipv.png",
+        "WarName": "MACEDONIAN",
+        "Bonus": 6,
+        "Disaster": [
+          { "Roll": 15 }
+        ],
+        "StandOff": [
+          { "Roll": 14 }
+        ]
+      }
+    ],
+    "Intrigue": [
+      {
+        "CardNo": 120,
+        "Name": "Tribute",
+        "ImageName": "tribune.png",
+        "SpecialRules": [
+          {
+            "Code": "TRIBUNE"
+          }
+        ]
+      },
+      {
+        "CardNo": 121,
+        "Name": "Tribute",
+        "ImageName": "tribune.png",
+        "SpecialRules": [
+          {
+            "Code": "TRIBUNE"
+          }
+        ]
+      },
+      {
+        "CardNo": 122,
+        "Name": "Tribute",
+        "ImageName": "tribune.png",
+        "SpecialRules": [
+          {
+            "Code": "TRIBUNE"
+          }
+        ]
+      },
+      {
+        "CardNo": 123,
+        "Name": "Tribute",
+        "ImageName": "tribune.png",
+        "SpecialRules": [
+          {
+            "Code": "TRIBUNE"
+          }
+        ]
+      },
+      {
+        "CardNo": 124,
+        "Name": "Tribute",
+        "ImageName": "tribune.png",
+        "SpecialRules": [
+          {
+            "Code": "TRIBUNE"
+          }
+        ]
+      },
+      {
+        "CardNo": 125,
+        "Name": "Tribute",
+        "ImageName": "tribune.png",
+        "SpecialRules": [
+          {
+            "Code": "TRIBUNE"
+          }
+        ]
+      },
+      {
+        "CardNo": 126,
+        "Name": "Tribute",
+        "ImageName": "tribune.png",
+        "SpecialRules": [
+          {
+            "Code": "TRIBUNE"
+          }
+        ]
+      },
+      {
+        "CardNo": 127,
+        "Name": "Tribute",
+        "ImageName": "tribune.png",
+        "SpecialRules": [
+          {
+            "Code": "TRIBUNE"
+          }
+        ]
+      },
+      {
+        "CardNo": 128,
+        "Name": "Tribute",
+        "ImageName": "tribune.png",
+        "SpecialRules": [
+          {
+            "Code": "TRIBUNE"
+          }
+        ]
+      },
+      {
+        "CardNo": 129,
+        "Name": "Influence Peddling",
+        "ImageName": "influencepeddling.png",
+        "SpecialRules": [
+          {
+            "Code": "INFLUENCE_PEDDLING"
+          }
+        ]
+      },
+      {
+        "CardNo": 130,
+        "Name": "Blackmail",
+        "ImageName": "blackmail.png",
+        "SpecialRules": [
+          {
+            "Code": "BLACKMAIL"
+          }
+        ]
+      },
+      {
+        "CardNo": 131,
+        "Name": "Seduction",
+        "ImageName": "seduction.png",
+        "SpecialRules": [
+          {
+            "Code": "SEDUCTION"
+          }
+        ]
+      },
+      {
+        "CardNo": 132,
+        "Name": "Assassin",
+        "ImageName": "assassin.png",
+        "SpecialRules": [
+          {
+            "Code": "ASSASSIN"
+          }
+        ]
+      },
+      {
+        "CardNo": 133,
+        "Name": "Secret Bodyguard",
+        "ImageName": "secretbodyguard.png",
+        "SpecialRules": [
+          {
+            "Code": "SECRET_BODYGUARD"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,121 @@
+﻿@using RoRService.Models.DataModels.Enums;
+@using RoRService.Models.ViewModels.GamesViewModels;
+@model GameDetailsVM
+
+<div class="game-detail-item">
+    @using (Html.BeginForm("AddPlayerToGame", "GameLobby", FormMethod.Post, new { id = "addPlayerToGameForm" }))
+    {
+        string imgSrc = string.Empty;
+
+        <div id="gameCloseX" class="close-x">X</div>
+
+        <div class="game-heading augustus">
+            @Html.DisplayFor(m => m.Name)
+        </div>
+        <div class="game-description">
+            @Html.DisplayFor(m => m.Description)
+        </div>
+        <div class="game-item">
+            <div class="pull-right">
+                @Html.DisplayFor(m => m.Era).ToString().ToUpper() REPUBLIC
+            </div>
+            Era
+        </div>
+        <div class="game-item">
+            <div class="pull-right">
+                @Html.DisplayFor(m => m.Owner)
+            </div>
+            Owner
+        </div>
+        <div class="game-item">
+            <div class="pull-right">
+                @Html.DisplayFor(m => m.FormatedDateOfLastAction)
+            </div>
+            Last Action Date
+        </div>
+        <div class="game-item">
+            <div class="pull-right">
+                @Html.DisplayFor(m => m.Status)
+            </div>
+            Status
+        </div>
+
+        <div class="game-heading augustus">Player Details</div>
+        if (Model.PlayerList != null)
+        {
+            for (int i = 0; i < Model.PlayerList.Count; i++)
+            {
+                <div class="form-group game-item">
+                    @Html.DisplayFor(m => m.PlayerList[i].Name)
+                    <div class="pull-right">
+                        @Html.DisplayFor(m => m.PlayerList[i].FactionName)
+                    </div>
+                </div>
+
+                @Html.HiddenFor(m => m.PlayerList[i].Id)
+                @Html.HiddenFor(m => m.PlayerList[i].FactionName)
+                @Html.HiddenFor(m => m.PlayerList[i].Name)
+            }
+        }
+
+        if (Model.Status == GameStatus.Open && (Model.PlayerList == null || (Model.PlayerList.Count < 6 && !Model.PlayerList.Any(f => f.Name == User.Identity.Name))))
+        {
+            @Html.HiddenFor(m => m.Id, new { id = "gameIdForPlayer" })
+            @Html.HiddenFor(m => m.Name)
+            @Html.HiddenFor(m => m.Description)
+            @Html.HiddenFor(m => m.Owner)
+            @Html.HiddenFor(m => m.Era)
+            @Html.HiddenFor(m => m.Status)
+
+            <div class="form-group game-item">
+                @Html.TextBoxFor(m => m.NewPlayer.Name, new { @class = "game-input", @Value = User.Identity.Name, @readonly = "readonly" })
+                <div class="pull-right">
+                    @Html.TextBoxFor(m => m.NewPlayer.FactionName, new { @class = "game-input", @placeholder = "Faction Name" })
+                </div>
+            </div>
+
+            @Html.ValidationSummary(false, "")
+            <div class="btn btn-success btn-sm game-detail-btn" onclick="addPlayerToGame(); false;">Join Game</div>
+        }
+    }
+
+    @switch (Model.Status)
+    {
+        case GameStatus.Open:
+            if (!(Model.PlayerList == null) && Model.PlayerList.Count > 0 && Model.Owner == User.Identity.Name)
+            {
+                using (Html.BeginForm("StartGame", "GameBoard", FormMethod.Post))
+                {
+                    <button type="submit" class="btn btn-danger btn-sm game-detail-btn" >Start Game</button>
+                    <input type="hidden" name="gameId" value="@Model.Id" />
+                    <input type="hidden" name="gameEra" value="@Model.Era" />
+                };
+            }
+            else
+            {
+                <div class="btn btn-default btn-sm game-detail-btn">Waiting on game owner to start game</div>
+            }
+            break;
+
+        case GameStatus.Playing:
+            if (Model.PlayerList.Any(f => f.Name == User.Identity.Name))
+            {
+                using (Html.BeginForm("ResumeGame", "GameBoard", FormMethod.Post))
+                {
+                    <button type="submit" class="btn btn-danger btn-sm game-detail-btn">Resume Game</button>
+                    <input type="hidden" name="gameId" value="@Model.Id" />
+                };
+            }
+            else
+            {
+                <div id="viewGameBtn" class="btn btn-danger btn-sm game-detail-btn">View Game Log (Doesn't work)</div>
+            }
+            break;
+
+        case GameStatus.Completed:
+            <div id="viewGameBtn" class="btn btn-danger btn-sm game-detail-btn">View Game Log (Doesn't work)</div>
+            break;
+    }
+
+
+</div>

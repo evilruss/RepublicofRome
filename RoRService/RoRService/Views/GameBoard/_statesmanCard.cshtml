@@ -1,0 +1,71 @@
+﻿@using RoRService.Models.DataModels.Enums
+@using RoRService.Models.ViewModels.CardsViewModels
+@model StatesmanVM
+
+<div class="card">
+    <div class="card-header">
+        <div class="pull-right">#@Model.FamilyNo@Model.FamilyLetter</div>
+        <div class="card-name">@Model.Name</div> 
+    </div>
+
+    <div class="pull-left" style="display: block;">
+        <img src="~/Images/Cards/@Model.Image" class="card-img" />
+        <div class="card-type">STATESMAN</div>
+    </div>
+    <div class="card-item">
+        MILITARY <div class="pull-right">@Model.Military</div>
+    </div>
+    <div class="card-item">
+        ORATORY <div class="pull-right">@Model.Oratory</div>
+    </div>
+    <div class="card-item">
+        Loyalty <div class="pull-right">@Model.Loyalty</div>
+    </div>
+    <div class="card-item">
+        Influence <div class="pull-right">@Model.Influence</div>
+    </div>
+    <div class="card-item">
+        Popularity <div class="pull-right">@Model.Popularity</div>
+    </div>
+    <div class="card-item">
+        Knights <div class="pull-right">@Model.Knights</div>
+    </div>
+    <div class="card-item">
+        Treasury <div class="pull-right">@Model.Treasury</div>
+    </div>
+    <div class="card-footer">
+        @if (Model.Status == CardStatus.Exile)
+        {
+            <div class="card-item exiled">In Exile</div>
+        }
+
+        @if (Model.FactionLeader)
+        {
+            <div class="card-item faction-leader">Faction Leader</div>
+        }
+
+        @if (Model.PriorConsul)
+        {
+            <div class="card-item prior-consul">Prior Consul</div>
+        }
+
+        @if (Model.Office != null)
+        {
+            <div class="card-item office-holder">
+                @Model.Office.Title
+                <div class="pull-right">@Model.Office.Rank</div>
+            </div>
+        }
+
+        @if (!string.IsNullOrEmpty(Model.Governor))
+        {
+            <div class="card-item office-holder">
+                Governor of @Model.Governor
+                <div class="pull-right">Term @Model.GovernorTerm</div>
+            </div>
+        }
+    </div>
+</div>
+
+
+

@@ -1,0 +1,677 @@
+﻿/* -------------------------------- General -------------------------------- */
+
+body {
+    margin: auto;
+    max-width: 1200px;
+}
+
+/*@font-face {
+    font-family: 'Augustus';
+    src: url("../fonts/Augustus.otf") format('opentype'), url("../fonts/Augustus.ttf") format('truetype'), url("../fonts/Augustus.woff") format('woff'), url("../fonts/Augustus.svg") format('svg');
+}*/
+
+@font-face {
+    font-family: 'Augustus';
+    src: url('../fonts/Augustus.woff');
+    src: url('../fonts/Augustus.eot?') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/webfont.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/Augustus.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/Augustus.svg') format('svg'); /* Legacy iOS */
+}
+
+.augustus {
+    font-family: 'Augustus';
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+}
+
+.table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td {
+    vertical-align: middle;
+}
+
+
+.text-title-fixed {
+    font-size: 60px;
+}
+
+.text-heading-fixed {
+    font-size: 45px;
+}
+
+.text-sub-heading-fixed {
+    font-size: 30px;
+}
+
+/* -------------------------------- Nav Bar -------------------------------- */
+
+.navbar {
+    background-color: orangered;
+    border-radius: 0;
+    clear: both;
+    font-size: 18px;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+    .navbar .navbar-nav > li > a {
+        color: beige;
+    }
+
+
+/*.navbar {
+    border-radius: 0;
+    font-size: 18px;
+    margin: auto;
+    min-height: 0;
+    height: 40px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFF;
+}
+
+.navbar-top {
+    height: 40px;
+}
+
+.navbar-nav {
+    background-color: none;
+    height: 40px;
+}
+
+    .navbar-nav > li > a {
+        background-color: red;
+        height: 40px;
+        padding-top: 10px;
+        padding-bottom: 18px;
+    }
+
+.navbar-inverse {
+    background-color: none;
+    border-color: none;
+    height: 40px;
+}*/
+
+/* -------------------------------- Banner -------------------------------- */
+
+.banner,
+.banner-extended {
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("../Images/Games/game-lobby.jpg");
+    padding: 1px 0 10px 0;
+}
+
+.banner {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: top;
+}
+
+.banner-extended {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+
+.banner-heading {
+    color: gold;
+    text-align: center;
+    text-shadow: 1px 1px 2px orangered;
+}
+
+.banner-text {
+    font-weight: bold;
+    text-align: center;
+    color: gold;
+}
+
+/* ----------------------------- Login Register -----------------------------*/
+
+
+
+.login-form {
+    background-color: khaki;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+    box-shadow: black 4px 4px 4px;
+    margin: auto;
+    padding: 10px 10px 10px 10px;
+    text-align: left;
+    width: 380px;
+}
+
+.login-img {
+    float: left;
+    height: 100px;
+    margin: 0 15px;
+}
+
+.login-label {
+    margin-right: 10px;
+    text-align: right;
+    vertical-align: middle;
+    width: 120px;
+}
+
+.login-control {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px dotted black;
+}
+
+.register-heading {
+    padding: 12px 0;
+}
+
+/* ------------------------------ Page Intro ------------------------------ */
+
+.page-intro {
+    background-color: white;
+    color: black;
+    height: 170px;
+    margin: 5px 5px;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.page-intro-title {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.page-intro-text {
+    margin-bottom: 10px;
+}
+
+
+.side-img-left,
+.side-img-right {
+    height: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.side-img-left {
+    float: left;
+}
+
+.side-img-right {
+    float: right;
+}
+
+/* ------------------------------- Game Selector ------------------------------- */
+
+.game-selector-box {
+    background-color: khaki;
+    border: 1px solid darkgoldenrod;
+    border-left: 3px solid darkgoldenrod;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 10px 5px;
+    padding: 10px 10px;
+}
+
+.game-select-options {
+    font-size: 14px;
+    padding: 15px 0 15px 5px;
+}
+/* ------------------------------- Game Lobby ------------------------------- */
+
+.game-lobby {
+    background-color: beige;
+    padding: 10px 10px;
+}
+
+.game-lobby-display {
+    border: none;
+    margin: auto;
+    max-width: 992px;
+    min-height: 500px;
+}
+
+.game-lobby-list,
+.game-lobby-details,
+.game-list-item,
+.game-detail-item,
+.game-item {
+    border-radius: 4px;
+    padding: 5px 5px;
+}
+
+.game-list-item {
+    border: 1px solid darkgoldenrod;
+    box-shadow: none;
+    background-color: palegoldenrod;
+    cursor: pointer;
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+.game-detail-item {
+    border: 1px solid darkgoldenrod;
+    background-color: khaki;
+}
+
+
+    .game-selector-box:hover,
+    .game-list-item:hover,
+    .game-detail-item:hover {
+        box-shadow: 4px 4px 4px grey;
+    }
+
+.game-selector-box,
+.game-list-item,
+.game-detail-item {
+    -webkit-transition: box-shadow 0.5s; /* Safari */
+    transition: box-shadow 0.5s;
+}
+
+.game-heading {
+    font-weight: bold;
+    height: 20px;
+    overflow: hidden;
+}
+
+.game-description {
+    font-size: 12px;
+    height: 20px;
+    overflow: hidden;
+    margin-bottom: 2px;
+    padding: 2px 0;
+}
+
+.game-info {
+    font-size: 12px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.game-item {
+    background-color: beige;
+    border: 1px solid darkgoldenrod;
+    border-left: 3px solid darkgoldenrod;
+    padding: 0 5px;
+    margin-bottom: 2px;
+}
+
+.faction-img {
+    height: 18px;
+    margin-top: -10px;
+    margin-bottom: -8px;
+}
+
+
+.game-detail-btn {
+    display: inline-block;
+    margin-top: 3px;
+}
+
+
+.game-ddl-right,
+.game-input-right,
+.game-input-wide,
+.game-input {
+    border: none;
+}
+
+.game-input-wide,
+.game-input,
+.game-ddl-right,
+.game-input-right {
+    background: white;
+    background: rgba(255, 255, 255, 0.7);
+    padding-left: 2px;
+}
+
+.game-input-wide {
+    width: 100%;
+}
+
+.game-ddl-right,
+.game-input-right {
+    padding-right: 5px;
+    margin-right: -5px;
+    text-align: right;
+}
+
+.game-ddl-right {
+    margin-top: 3px;
+}
+
+.close-x {
+    color: grey;
+    cursor: pointer;
+    float: right;
+    font-size: 14pt;
+    height: 20px;
+    padding: 0 5px 0 10px;
+}
+
+.display-header {
+    font-size: 40px;
+    text-align: center;
+}
+
+/* ----------------------------------- Game Board ---------------------------------- */
+
+.forum {
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("../Images/map-europe-2.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    min-height: 400px;
+    vertical-align: top;
+}
+
+/* ------------------------------------ Factions ----------------------------------- */
+
+.faction-display {
+    background-color: khaki;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    padding: 5px 5px;
+}
+
+.faction-header {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 16px 10px 16px;
+}
+
+.faction-detail {
+    background-color: white;
+    border: 1px solid darkgoldenrod;
+    border-left: 3px solid darkgoldenrod;
+    border-radius: 4px;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+.faction-item-img {
+    height: 30px;
+}
+
+/* ------------------------------------- Cards ------------------------------------- */
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid darkgoldenrod;
+    box-shadow: none;
+    letter-spacing: 0.7px;
+    margin-bottom: 10px;
+    min-height: 230px;
+    padding: 5px 5px;
+    width: 100%;
+}
+
+.card-1 {
+    background-color: lightgrey;
+}
+
+.card-2 {
+    background-color: mistyrose;
+}
+
+.card-type,
+.card-header {
+    color: orangered;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 4px 4px 6px;
+}
+
+.card-type {
+    padding-top: 7px;
+}
+
+.card-name {
+    width: 310px;
+}
+
+.card-text,
+.card-item {
+    background-color: beige;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 1px 5px;
+    margin: 0 5px 5px 128px;
+}
+
+.card-text {
+    line-height: 1.25;
+}
+
+
+.card-footer {
+    border-radius: 2px;
+    font-weight: bold;
+    margin: 5px 5px 0 5px;
+}
+
+.card-img {
+    display: block;
+    height: 155px;
+    padding-left: 5px;
+}
+
+.exiled,
+.faction-leader,
+.governor,
+.office-holder,
+.prior-consul {
+    border-radius: 2px;
+    letter-spacing: 1px;
+    padding: 0 5px 0 5px;
+    margin: 5px 0 5px 0;
+}
+
+.exiled {
+    background-color: orange;
+}
+
+.faction-leader {
+    background-color: #ffe22a;
+}
+
+.governor {
+    background-color: #b3c6ff;
+}
+
+.office-holder {
+    background-color: #d14341;
+    color: #f8f828;
+}
+
+.prior-consul {
+    background-color: yellow;
+}
+
+/* ------------------------------- Responsive sizing ------------------------------- */
+
+@media (max-width: 575px) {
+    body,
+    .navbar {
+        min-width: 400px;
+    }
+
+    .banner {
+        height: 60px;
+    }
+
+    .text-title {
+        font-size: 24px;
+    }
+
+    .text-heading {
+        font-size: 18px;
+    }
+
+    .text-sub-heading {
+        font-size: 10px;
+    }
+
+    .game-select-img {
+        height: 30px;
+    }
+}
+
+@media (min-width: 576px) {
+    body,
+    .navbar {
+        width: 576px;
+    }
+
+    .banner {
+        height: 75px;
+    }
+
+    .text-title {
+        font-size: 37px;
+    }
+
+    .text-heading {
+        font-size: 27px;
+    }
+
+    .text-sub-heading {
+        font-size: 12px;
+    }
+
+    .game-select-img {
+        height: 20px;
+    }
+
+    .game-select-img {
+        height: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    body,
+    .navbar {
+        width: 768px;
+    }
+
+    .banner {
+        height: 90px;
+    }
+
+    .text-title {
+        font-size: 45px;
+    }
+
+    .text-heading {
+        font-size: 32px;
+    }
+
+    .text-sub-heading {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) {
+    body,
+    .navbar {
+        width: 992px;
+    }
+
+    .banner {
+        height: 105px;
+    }
+
+    .text-title {
+        font-size: 52px;
+    }
+
+    .text-heading {
+        font-size: 39px;
+    }
+
+    .text-sub-heading {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body,
+    .navbar {
+        width: 1200px;
+    }
+
+    .banner {
+        height: 120px;
+    }
+
+    .text-title {
+        font-size: 60px;
+    }
+
+    .text-heading {
+        font-size: 45px;
+    }
+
+    .text-sub-heading {
+        font-size: 18px;
+    }
+}
+
+.padding-0 {
+    padding: 0 0;
+}
+
+
+
+/*
+    background: linear-gradient( to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.0) ), url("../Images/scroll-paper.jpg");
+    background: linear-gradient( to bottom, rgba(236,197,132, 0.95), rgba(236,197,132, 0.7) );
+    background: url("../Images/scroll-paper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+}
+*/

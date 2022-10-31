@@ -1,0 +1,36 @@
+﻿@using RoRService.Models.ViewModels.GamesViewModels;
+@model GameCreateVM
+
+<div class="game-detail-item">
+    @using (Html.BeginForm("CreateNewGame", "GameLobby", FormMethod.Post, new { id = "createNewGameForm" }))
+    {
+        <div id="gameCloseX" class="close-x">X</div>
+
+        <div class="game-heading">
+            @Html.TextBoxFor(m => m.Name, new { @class = "game-input", @placeholder = "Game Name" })
+        </div>
+        <div class="game-description">
+            @Html.TextBoxFor(m => m.Description, new { @class = "game-input-wide", @placeholder = "Game Description" })
+        </div>
+        <div class="game-item">
+            @Html.TextBoxFor(m => m.Owner, new { @class = "game-input-right pull-right", @Value = User.Identity.Name, @readonly = "readonly" })
+            @Html.LabelFor(m => m.Owner)
+        </div>
+        <div class="form-group game-item">
+            @Html.DropDownListFor(m => m.Era, new SelectList(Model.EraList, "Era", "DisplayName"), new { @class = "game-ddl-right pull-right" })
+            @Html.LabelFor(m => m.Era)
+        </div>
+
+        <div class="game-heading augustus">Player Details</div>
+        <div class="form-group game-item">
+            @Html.TextBoxFor(m => m.NewPlayer.FactionName, new { @class = "game-input", @placeholder = "Faction Name" })
+            <div class="pull-right">
+                @Html.TextBoxFor(m => m.NewPlayer.Name, new { @class = "game-input-right pull-right", @Value = User.Identity.Name, @readonly = "readonly" })
+            </div>
+        </div>
+
+        @Html.ValidationSummary(false, "")
+        
+        <div class="btn btn-success btn-sm" onclick="createNewGame(); false;">Create Game</div>
+    }
+</div>

@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5B20D13-2BDF-4B31-8C88-25291E861E73}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RoRService</RootNamespace>
+    <AssemblyName>RoRService</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>true</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.MVC3.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.108.0\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.108.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.108.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.6\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.6\lib\net45\System.Web.Http.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebApiContrib.IoC.Ninject, Version=0.9.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebApiContrib.IoC.Ninject.0.9.3.0\lib\net40\WebApiContrib.IoC.Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\StartUp.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FactionController.cs" />
+    <Compile Include="Controllers\GameBoardController.cs" />
+    <Compile Include="Controllers\GameLobbyController.cs" />
+    <Compile Include="Engines\Contracts\IGameEngine.cs" />
+    <Compile Include="Engines\Contracts\IGameStartUpEngine.cs" />
+    <Compile Include="Engines\GameEngine.cs" />
+    <Compile Include="Engines\GameOperations.cs" />
+    <Compile Include="Engines\GameResumeEngine.cs" />
+    <Compile Include="Engines\GameStartUpEngine.cs" />
+    <Compile Include="Helpers\HttpClientHelper.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Contracts\ICard.cs" />
+    <Compile Include="Models\Contracts\IConcession.cs" />
+    <Compile Include="Models\Contracts\IPlayer.cs" />
+    <Compile Include="Models\Contracts\IIntrigue.cs" />
+    <Compile Include="Models\Contracts\ILeader.cs" />
+    <Compile Include="Models\Contracts\ISenator.cs" />
+    <Compile Include="Models\Contracts\ISpecialRules.cs" />
+    <Compile Include="Models\Contracts\IStatesman.cs" />
+    <Compile Include="Models\Contracts\IWar.cs" />
+    <Compile Include="Models\Contracts\IWarBase.cs" />
+    <Compile Include="Models\DataModels\Authentication\ApplicationDbContext.cs" />
+    <Compile Include="Models\DataModels\Authentication\ApplicationUser.cs" />
+    <Compile Include="Models\DataModels\Cards\CardVariables.cs" />
+    <Compile Include="Models\DataModels\Cards\Concession.cs" />
+    <Compile Include="Models\DataModels\Cards\Intrigue.cs" />
+    <Compile Include="Models\DataModels\Cards\Leader.cs" />
+    <Compile Include="Models\DataModels\Cards\Senator.cs" />
+    <Compile Include="Models\DataModels\Cards\Statesman.cs" />
+    <Compile Include="Models\DataModels\Cards\War.cs" />
+    <Compile Include="Models\DataModels\Cards\Card.cs" />
+    <Compile Include="Models\DataModels\Enums\CardStatus.cs" />
+    <Compile Include="Models\DataModels\Enums\CardType.cs" />
+    <Compile Include="Models\DataModels\Enums\Era.cs" />
+    <Compile Include="Models\DataModels\Enums\GameStatus.cs" />
+    <Compile Include="Models\DataModels\Enums\LegionStatus.cs" />
+    <Compile Include="Models\DataModels\Enums\OfficeTitle.cs" />
+    <Compile Include="Models\DataModels\Event.cs" />
+    <Compile Include="Models\DataModels\Faction.cs" />
+    <Compile Include="Models\DataModels\Legion.cs" />
+    <Compile Include="Models\DataModels\Office.cs" />
+    <Compile Include="Models\DataModels\Player.cs" />
+    <Compile Include="Models\DataModels\GameBoard.cs" />
+    <Compile Include="Models\DataModels\Republic.cs" />
+    <Compile Include="Models\DataModels\Ship.cs" />
+    <Compile Include="Models\ViewModels\AccountsViewModels\LoginVM.cs" />
+    <Compile Include="Models\ViewModels\AccountsViewModels\RegisterVM.cs" />
+    <Compile Include="Models\ViewModels\CardsViewModels\CardVM.cs" />
+    <Compile Include="Models\ViewModels\CardsViewModels\ConcessionVM.cs" />
+    <Compile Include="Models\ViewModels\CardsViewModels\IntrigueVM.cs" />
+    <Compile Include="Models\ViewModels\CardsViewModels\SenatorVM.cs" />
+    <Compile Include="Models\ViewModels\CardsViewModels\StatesmanVM.cs" />
+    <Compile Include="Models\ViewModels\CardsViewModels\WarVM.cs" />
+    <Compile Include="Models\ViewModels\EventVM.cs" />
+    <Compile Include="Models\ViewModels\FactionsViewModels\FactionVM.cs" />
+    <Compile Include="Models\ViewModels\GameBoardViewModels\GameBoardVM.cs" />
+    <Compile Include="Models\ViewModels\LegionVM.cs" />
+    <Compile Include="Models\ViewModels\OfficeVM.cs" />
+    <Compile Include="Models\ViewModels\PlayersViewModels\NewPlayerVM.cs" />
+    <Compile Include="Models\ViewModels\GamesViewModels\EraListItem.cs" />
+    <Compile Include="Models\ViewModels\GamesViewModels\GameCreateVM.cs" />
+    <Compile Include="Models\ViewModels\GamesViewModels\GameDetailsVM.cs" />
+    <Compile Include="Models\ViewModels\GamesViewModels\GameListVM.cs" />
+    <Compile Include="Models\ViewModels\RepublicsViewModels\RepublicVM.cs" />
+    <Compile Include="Repositories\CardsSQLiteRepository.cs" />
+    <Compile Include="Repositories\Contracts\ICardsRepository.cs" />
+    <Compile Include="Repositories\Contracts\IEventsRepository.cs" />
+    <Compile Include="Repositories\Contracts\ILegionsRepository.cs" />
+    <Compile Include="Repositories\Contracts\IOfficesRepository.cs" />
+    <Compile Include="Repositories\Contracts\IRepublicsRepository.cs" />
+    <Compile Include="Repositories\EventsSQLiteRepository.cs" />
+    <Compile Include="Repositories\FactionsSQLiteRepository.cs" />
+    <Compile Include="Repositories\Contracts\IFactionsRepository.cs" />
+    <Compile Include="Repositories\Contracts\ISQLiteHelper.cs" />
+    <Compile Include="Repositories\LegionsSQLiteRepository.cs" />
+    <Compile Include="Repositories\OfficesSQLiteRepository.cs" />
+    <Compile Include="Repositories\PlayersSQLiteRepository.cs" />
+    <Compile Include="Repositories\Contracts\IPlayersRepository.cs" />
+    <Compile Include="Repositories\Helpers\RepositoryActionResult.cs" />
+    <Compile Include="Repositories\Helpers\RepositoryActionStatus.cs" />
+    <Compile Include="Repositories\RepublicsSQLiteRepository.cs" />
+    <Compile Include="Resources\CardsResource.cs" />
+    <Compile Include="Resources\Contracts\ICardsResource.cs" />
+    <Compile Include="Resources\Contracts\IEventsResource.cs" />
+    <Compile Include="Resources\Contracts\IFactionsResource.cs" />
+    <Compile Include="Resources\Contracts\IGamesResource.cs" />
+    <Compile Include="Resources\Contracts\ILegionsResource.cs" />
+    <Compile Include="Resources\Contracts\IOfficesResource.cs" />
+    <Compile Include="Resources\Contracts\IPlayersResource.cs" />
+    <Compile Include="Resources\Contracts\IRepublicsResource.cs" />
+    <Compile Include="Resources\EventsResource.cs" />
+    <Compile Include="Resources\FactionsResource.cs" />
+    <Compile Include="Resources\GamesResource.cs" />
+    <Compile Include="Resources\LegionsResource.cs" />
+    <Compile Include="Resources\OfficesResource.cs" />
+    <Compile Include="Resources\PlayersResource.cs" />
+    <Compile Include="Resources\RepublicsResource.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="WebAPIControllers\CardsController.cs" />
+    <Compile Include="WebAPIControllers\EventsController.cs" />
+    <Compile Include="WebAPIControllers\FactionsController.cs" />
+    <Compile Include="WebAPIControllers\LegionsController.cs" />
+    <Compile Include="WebAPIControllers\OfficesController.cs" />
+    <Compile Include="WebAPIControllers\PlayersController.cs" />
+    <Compile Include="WebAPIControllers\GamesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contracts\IGame.cs" />
+    <Compile Include="Models\DataModels\Game.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\GamesSQLiteRepository.cs" />
+    <Compile Include="Repositories\Contracts\IGamesRepository.cs" />
+    <Compile Include="Repositories\Helpers\SQLiteHelper.cs" />
+    <Compile Include="WebAPIControllers\RepublicsController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Database\ClearData.sql" />
+    <Content Include="Database\ConcessionCards.sql" />
+    <Content Include="Database\IntrigueCards.sql" />
+    <Content Include="Database\SenatorCards.sql" />
+    <Content Include="Database\StatesmanCards.sql" />
+    <Content Include="Database\WarCards.sql" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\Augustus.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\aurelius.png" />
+    <Content Include="Images\Banners\RepublicOfRomeBannerTransparent.png" />
+    <Content Include="Images\Banners\ror-banner-with-scroll.jpg" />
+    <Content Include="Images\Banners\ror-banner-with-scroll2.jpg" />
+    <Content Include="Images\Banners\ror-main-banner.jpg" />
+    <Content Include="Images\Banners\the-republic-of-rome-black.jpg" />
+    <Content Include="Images\Banners\the-republic-of-rome.jpg" />
+    <Content Include="Images\Cards\armaments.png" />
+    <Content Include="Images\Cards\assassin.png" />
+    <Content Include="Images\Cards\crown.png" />
+    <Content Include="Images\Cards\death.png" />
+    <Content Include="Images\Cards\graft.png" />
+    <Content Include="Images\Cards\grain.png" />
+    <Content Include="Images\Cards\harbour-fees.png" />
+    <Content Include="Images\Cards\influence-peddling.png" />
+    <Content Include="Images\Cards\land-commissioner.png" />
+    <Content Include="Images\Cards\law.png" />
+    <Content Include="Images\Cards\mining.png" />
+    <Content Include="Images\Cards\murder-of-a-tribune.png" />
+    <Content Include="Images\Cards\punic.png" />
+    <Content Include="Images\Cards\secret-bodyguard.png" />
+    <Content Include="Images\Cards\seduction.png" />
+    <Content Include="Images\Cards\senator.png" />
+    <Content Include="Images\Cards\ship-building.png" />
+    <Content Include="Images\Cards\statesman.png" />
+    <Content Include="Images\Cards\tax-farmer.png" />
+    <Content Include="Images\Cards\tribune.png" />
+    <Content Include="Images\Cicero.jpg" />
+    <Content Include="Images\coins.png" />
+    <Content Include="Images\eagle-spqr.png" />
+    <Content Include="Images\Factions\faction-0.jpg" />
+    <Content Include="Images\Factions\faction-1.jpg" />
+    <Content Include="Images\Factions\faction-2.jpg" />
+    <Content Include="Images\Factions\faction-3.jpg" />
+    <Content Include="Images\Factions\faction-4.jpg" />
+    <Content Include="Images\Factions\faction-5.jpg" />
+    <Content Include="Images\Figures\citizen-left.png" />
+    <Content Include="Images\Figures\gladiator-right.png" />
+    <Content Include="Images\Figures\senator-left.png" />
+    <Content Include="Images\Figures\senator-right.png" />
+    <Content Include="Images\Figures\soldier-left.png" />
+    <Content Include="Images\Games\all-games.png" />
+    <Content Include="Images\Games\game-completed.jpg" />
+    <Content Include="Images\Games\game-lobby.jpg" />
+    <Content Include="Images\Games\game-open.jpg" />
+    <Content Include="Images\Games\game-others-playing.jpg" />
+    <Content Include="Images\Games\game-playing.jpg" />
+    <Content Include="Images\Games\my-games.png" />
+    <Content Include="Images\Games\new-game.png" />
+    <Content Include="Images\Games\open-game-12.png" />
+    <Content Include="Images\Games\started-game-12.png" />
+    <Content Include="Images\hands-voting.png" />
+    <Content Include="Images\laurel-wreath.png" />
+    <Content Include="Images\map-europe-2.jpg" />
+    <Content Include="Images\Offices\Fasces.png" />
+    <Content Include="Images\Offices\Fasces2.png" />
+    <Content Include="Images\playing-cards-2.png" />
+    <Content Include="Images\RomanForum.jpg" />
+    <Content Include="Images\scroll-paper.jpg" />
+    <Content Include="Images\pen-and-ink.png" />
+    <Content Include="Images\Scrolls\scroll-paper.png" />
+    <Content Include="Images\Scrolls\scroll-type-2.png" />
+    <Content Include="Images\Scrolls\scroll-type-3.png" />
+    <Content Include="Images\Scrolls\scroll-type-4-wide.png" />
+    <Content Include="Images\Scrolls\scroll-type-4.png" />
+    <Content Include="Images\Scrolls\scroll-type-5-khaki.png" />
+    <Content Include="Images\Scrolls\scroll-type-5.png" />
+    <Content Include="Images\Scrolls\scroll.jpg" />
+    <Content Include="Images\SPQREagle.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\Augustus.ttf" />
+    <Content Include="fonts\Augustus.woff" />
+    <Content Include="fonts\Augustus.eot" />
+    <Content Include="Database\CardList.json" />
+    <Content Include="Database\RoRDB.db" />
+    <None Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\ror-game-board.js" />
+    <Content Include="Scripts\ror-game-lobby.js" />
+    <Content Include="Scripts\ror-initialise.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\GameLobby\_gameDetails.cshtml" />
+    <Content Include="Views\GameLobby\_gameCreate.cshtml" />
+    <Content Include="Views\GameLobby\_gameListItem.cshtml" />
+    <Content Include="Views\GameLobby\_gameList.cshtml" />
+    <Content Include="Views\GameLobby\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\GameLobby\_gameCreateSuccessful.cshtml" />
+    <Content Include="Views\GameBoard\Index.cshtml" />
+    <Content Include="Views\Shared\_banner.cshtml" />
+    <Content Include="Views\GameBoard\ResumeGame.cshtml" />
+    <Content Include="Views\GameBoard\_factionDisplay.cshtml" />
+    <Content Include="Views\GameBoard\_senatorCard.cshtml" />
+    <Content Include="Views\GameBoard\_statesmanCard.cshtml" />
+    <Content Include="Views\GameBoard\_concessionCard.cshtml" />
+    <Content Include="Views\GameBoard\_intrigueCard.cshtml" />
+    <Content Include="Views\GameBoard\_republicDisplay.cshtml" />
+    <Content Include="Views\GameBoard\_warCard.cshtml" />
+    <Content Include="Views\GameBoard\_eventCard.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.12.4.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50666</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50666/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

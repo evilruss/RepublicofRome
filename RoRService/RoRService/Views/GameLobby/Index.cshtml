@@ -1,0 +1,42 @@
+﻿@Html.Partial("_banner")
+
+<section id="page-intro" class="page-intro clearfix">
+    <img class="side-img-left" src="~/Images/Figures/soldier-left.png" />
+    <img class="side-img-right" src="~/Images/Figures/senator-right.png" />
+
+    <div class="page-intro-title text-title">
+        GAME LOBBY
+    </div>
+    <div class="page-intro-text text-sub-heading">
+        Welcome to the Game Lobby.  Please choose a game to join or create a new game.
+    </div>
+</section>
+
+<section id="game-lobby" class="game-lobby">
+    <div id="gameLobbyDisplay" class="game-lobby-display">
+        <input id="gameTypeOption" type="hidden" />
+        <div id="myGames" class="game-selector-box augustus">
+            MY GAMES
+        </div>
+        <div id="allGames" class="game-selector-box augustus">
+            ALL GAMES
+        </div>
+        <div id="newGame" class="game-selector-box augustus">
+            NEW GAME
+        </div>
+        <div class="game-select-options">
+            <form id="openPlayingCompletedForm">
+                <input id="openGames" type="checkbox" name="openGames" checked="checked" /> Open Games &nbsp;
+                <input id="playingGames" type="checkbox" name="playingGames" checked="checked" /> Playing Games &nbsp;
+                <input id="completedGames" type="checkbox" name="completedGames" /> Completed Games
+            </form>
+        </div>
+        <div id="gameLobbyList" class="game-lobby-list">
+            Loading Game List ....
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/Scripts/ror-game-lobby.js"></script>
+}

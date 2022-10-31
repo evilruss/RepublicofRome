@@ -1,0 +1,61 @@
+﻿@using RoRService.Models.ViewModels.AccountsViewModels
+@model LoginVM
+@{
+    ViewBag.Title = "Log in";
+}
+
+<section id="rorBanner" class="banner-extended">
+    <div class="banner-heading text-title augustus">
+        THE REPUBLIC OF ROME
+    </div>
+    <div class="banner-text text-sub-heading">
+        A web based version of the classic Avalon Hill board game.
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <section id="loginForm">
+        <div class="login-form">
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="clearfix">
+                    <img class="login-img" src="~/Images/pen-and-ink.png" />
+                    <br />
+                    <div class="text-sub-heading-fixed augustus">Player Login</div>
+                </div>
+                <br />
+                <div>
+                    @Html.LabelFor(m => m.UserName, new { @class = "login-label" })
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "login-control", @style = "text-transform: uppercase;" })
+                </div>
+                <div>
+                    @Html.LabelFor(m => m.Password, new { @class = "login-label" })
+                    @Html.PasswordFor(m => m.Password, new { @class = "login-control" })
+                </div>
+                <div class="text-center">
+                    @Html.CheckBoxFor(m => m.RememberMe)
+                    @Html.LabelFor(m => m.RememberMe)
+                </div>
+                <br />
+                <div class="text-center">
+                    <input type="submit" value="Log in" class="btn btn-success" />
+                </div>
+                <br />
+                <div class="text-center">
+                    New players @Html.ActionLink("register here", "Register").
+                </div>
+                <br />
+                <div>
+                    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                </div>
+            }
+        </div>
+    </section>
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

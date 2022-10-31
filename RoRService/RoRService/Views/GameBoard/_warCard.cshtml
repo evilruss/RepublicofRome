@@ -1,0 +1,40 @@
+﻿@using RoRService.Models.ViewModels.CardsViewModels;
+@model WarVM
+
+<div class="card">
+    <div class="card-header">
+        <div class="card-name">@Model.Name</div>
+    </div>
+
+    <div class="pull-left" style="display: block;">
+        <img src="~/Images/Cards/@Model.Image" class="card-img" />
+        <div class="card-type">WAR</div>
+    </div>
+    <div class="card-item">
+        Strength 
+        <div class="pull-right">
+            @Model.Legions / @Model.FleetSupport / @Model.Fleets
+        </div>
+    </div>
+
+    <div class="card-item">
+        Disaster
+        <div class="pull-right">
+            @Model.Disasters
+        </div>
+    </div>
+
+    <div class="card-item">
+        Standoff
+        <div class="pull-right">
+            @Model.StandOffs
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.Text))
+    {
+        <div class="card-text">
+            @Html.Raw(Model.Text)
+        </div>
+    }
+</div>

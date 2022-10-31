@@ -1,0 +1,23 @@
+﻿@using RoRService.Models.ViewModels
+@model EventVM
+
+<div class="card card-@Model.Level">
+    <div class="card-header">
+        <div class="card-name">@Model.Name</div>
+    </div>
+
+    <div class="pull-left" style="display: block;">
+        <img src="~/Images/Cards/@Model.Image" class="card-img" />
+        <div class="card-type">EVENT</div>
+    </div>
+    <div class="card-item">
+        Level <div class="pull-right">@Model.Level</div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.Text))
+    {
+        <div class="card-text">
+            @Html.Raw(Model.Text)
+        </div>
+    }
+</div>

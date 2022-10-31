@@ -1,0 +1,166 @@
+﻿@using RoRService.Models.DataModels.Enums;
+@using RoRService.Models.ViewModels.CardsViewModels;
+@using RoRService.Models.ViewModels.RepublicsViewModels
+@model RepublicVM
+
+
+
+<div class="faction-display">
+    <div class="display-header">The Republic <div id="gameCloseX" class="close-x">X</div> </div>
+
+    <div style="overflow: auto;">
+        <div class="faction clearfix">
+
+            <div class="col-md-4">
+                <div class="faction-detail">
+                    <img src="~/Images/coins.png" class="faction-item-img" />
+                    Game Turn
+                    <div class="pull-right">
+                        1
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="faction-detail">
+                    <img src="~/Images/unrest-level.png" class="faction-item-img" />
+                    Unrest Level
+                    <div class="pull-right">
+                        @Model.UnrestLevel
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="faction-detail">
+                    <img src="~/Images/coins.png" class="faction-item-img" />
+                    State Treasury
+                    <div class="pull-right">
+                        @Model.StateTreasury
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <hr />
+
+        <div class="faction clearfix">
+            <div class="faction-header">
+                Active Forces
+            </div>
+
+            <div class="col-md-4">
+                <div class="faction-detail">
+                    <img src="~/Images/Figures/soldier-left.png" class="faction-item-img" />
+                    Veteran Legions
+                    <div class="pull-right">
+                        @Model.Legions.Count
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="faction-detail">
+                    <img src="~/Images/Figures/soldier-left.png" class="faction-item-img" />
+                    Legions
+                    <div class="pull-right">
+                        @Model.Legions.Count
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="faction-detail">
+                    <img src="~/Images/Cards/ship-building.png" class="faction-item-img" />
+                    Fleets
+                    <div class="pull-right">
+                        @Model.Fleets
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="faction clearfix">
+            <div class="col-xs-12">
+                <div class="faction-header">
+                    Forum
+                </div>
+
+                @foreach (var card in Model.Deck.Where(c => c.Status == CardStatus.Forum).ToList())
+                {
+                    <div class="col-md-4">
+                        @switch (card.Type)
+                        {
+                            case CardType.Senator:
+                                @Html.Partial("_senatorCard", (SenatorVM)card)
+                                break;
+                            case CardType.Statesman:
+                                @Html.Partial("_statesmanCard", (StatesmanVM)card)
+                                break;
+                            case CardType.Concession:
+                                @Html.Partial("_concessionCard", (ConcessionVM)card)
+                                break;
+                            case CardType.Intrigue:
+                                @Html.Partial("_intrigueCard", (IntrigueVM)card)
+                                break;
+                        }
+                    </div>
+                }
+
+                @foreach (var eventCard in Model.Events)
+                {
+                    <div class="col-md-4">
+                        @Html.Partial("_eventCard", eventCard)
+                    </div>
+                }
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="faction clearfix">
+            <div class="col-xs-12">
+                <div class="faction-header">
+                    Wars
+                </div>
+
+                @foreach (var war in Model.Deck.Where(c => c.Status == CardStatus.Inactive).ToList())
+                {
+                    <div class="col-md-4">
+                         @Html.Partial("_warCard", (WarVM)war)
+                    </div>
+                }
+            </div>
+        </div>
+
+        <hr />
+
+        <div style="overflow: auto;">
+            <div class="col-md-4">
+                <div class="faction clearfix">
+                    <div class="faction-header">
+                        Provinces
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="faction clearfix">
+                    <div class="faction-header">
+                        Offices
+                    </div>
+                </div>
+
+                @foreach (var unallocatedOffice in Model.Deck.Where(c => c.Status == CardStatus.Inactive).ToList())
+                {
+                    <div class="col-md-4">
+                        @Html.Partial("_warCard", (WarVM)war)
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>

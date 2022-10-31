@@ -1,0 +1,31 @@
+﻿@using RoRService.Models.ViewModels.GameBoardViewModels
+@model GameBoardVM
+
+
+@Html.Partial("_banner")
+
+<section id="page-intro" class="page-intro clearfix">
+    <img class="side-img-left" src="~/Images/Figures/soldier-left.png" />
+    <img class="side-img-right" src="~/Images/Figures/senator-right.png" />
+
+    <div class="page-intro-title text-title">
+        GAME BOARD
+    </div>
+    <div class="page-intro-text text-sub-heading">
+        Game @Model.Name
+    </div>
+</section>
+
+<section id="republicDisplay">
+    @Html.Partial("_republicDisplay", Model.Republic)
+</section>
+
+
+<section id="factionDisplay">
+    @Html.Partial("_factionDisplay", Model.FactionList.ToList())
+</section>
+
+
+@section Scripts {
+    <script src="~/Scripts/ror-game-board.js"></script>
+}

@@ -1,0 +1,28 @@
+﻿@using RoRService.Models.ViewModels.GameBoardViewModels
+@model GameBoardVM
+
+@Html.Partial("_banner")
+
+<section id="page-intro" class="page-intro clearfix">
+    <img class="side-img-left" src="~/Images/Figures/soldier-left.png" />
+    <img class="side-img-right" src="~/Images/Figures/senator-right.png" />
+
+    <div class="page-intro-title text-title">
+        GAME BOARD
+    </div>
+    <div class="page-intro-text text-sub-heading">
+        Unable to determine the current game.  Please go to the Game Lobby and select a game.
+
+        @using (Html.BeginForm("Index", "GameLobby", FormMethod.Post))
+        {
+            <button type="submit" class="btn btn-danger btn-lg game-detail-btn">Game Lobby</button>
+        }
+    </div>
+</section>
+
+
+
+
+@section Scripts {
+    <script src="~/Scripts/ror-game-board.js"></script>
+}

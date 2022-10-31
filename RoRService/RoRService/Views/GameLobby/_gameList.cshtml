@@ -1,0 +1,9 @@
+﻿@using RoRService.Models.ViewModels.GamesViewModels
+@model IEnumerable<GameListVM>
+
+@foreach (var item in Model)
+{
+    <div class="game-list-item" id="game-@item.Id">
+        @Html.Partial("_gameListItem", item)
+    </div>
+}
